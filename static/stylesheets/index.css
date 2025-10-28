@@ -1,0 +1,42 @@
+.navbarContainer {
+    width: 100%;
+    height: 5%;
+    z-index: 1;
+    position: fixed;
+    margin-top: -0.5rem !important;
+    margin-left: -0.5rem !important;
+    display: block;
+    flex-direction: row;
+}
+
+.navbar {
+    background-color: #3e2e85;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #856bfd;
+}
+.navbarButton {
+    margin: auto;
+    width: 33%;
+    height: 95%;
+    background-color: #110148;
+    background-size: auto;
+    transition: background-color 2s;
+}
+
+.navbarLink {
+    background-size: auto;
+}
+.navbarButton:hover {
+    background-color: #2d2256;
+}
+
+
+
+.content {
+    padding-top: 5%
+}
