@@ -8,7 +8,7 @@ def index():
 
 @app.route("/portfolio")
 def portfolio():
-    pass
+    return flask.render_template("portfolio.html")
 
 @app.route("/commissions")
 def commissions():
