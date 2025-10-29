@@ -1,6 +1,12 @@
 import flask
+import os
 
 app = flask.Flask(__name__)
+
+class Image:
+    def __init__(self, src, name):
+        self.image = src
+        self.name = name
 
 @app.route('/')
 def index():
@@ -8,7 +14,10 @@ def index():
 
 @app.route("/portfolio")
 def portfolio():
-    return flask.render_template("portfolio.html")
+    images = []
+    for file in os.listdir("static/images"):
+        images.append(Image("images/" + file, file))
+    return flask.render_template("portfolio.html", images=images)
 
 @app.route("/commissions")
 def commissions():

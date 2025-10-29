@@ -1,7 +1,10 @@
 {% extends 'template.html' %}
-{% block stylesheet %}url_for("static", "stylesheets/index.css"){% endblock %}
+{% block stylesheet %} {{ url_for("static", filename="stylesheets/index.css") }} {% endblock %}
 {% block content %}
-{% for image in images %}
-
-{% endfor %}
+<div class="imagesContainer">
+    {% for image in images %}
+    <span class="comishText">{{ image.name }}</span>
+    <img class="comishImage" src="{{ url_for("static", filename=image.image) }}">
+    {% endfor %}
+</div>
 {% endblock %}
